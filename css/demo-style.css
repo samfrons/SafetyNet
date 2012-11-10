@@ -1,0 +1,158 @@
+
+
+    html, body {
+      font-family: 'Raleway';
+      font-weight: 100 !important;
+      margin: 0 auto;
+      padding: 0;
+      font-size: 100%;
+       margin: 0 auto;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    a:visited {
+      color: white !important;
+    }
+
+      a {
+      text-decoration: none;
+    }
+
+/* map */
+     .leaflet-container .leaflet-control-attribution {
+    display: none;
+    }
+
+    .btn-group a {
+      display: none !important;
+    }
+
+    a.hcb-flag {
+      display: none !important;
+    }
+
+    a.leaflet-control-zoom-in {
+      background-color: white;
+      background-image: url(imgs/zoom-in.png);
+    }
+
+    a.leaflet-control-zoom-out {
+      background-color: white;
+      background-image: url(imgs/zoom-out.png);
+    }
+
+
+ul.tunes { margin-left: -40px; }
+    ul.tunes li { position: relative; width: 150px; height: 190px; float: left; margin-left: 20px; }
+    ul.tunes li div.album { margin: 0 0 48px 0; display: inline; background: #; width: 150px; height: 120px; position: absolute; text-decoration: none; -webkit-transition: all .15s linear; color: #333; left: 0px; top: 0px; }
+    ul.tunes img { width: 120px; position: relative; z-index: 30; float: left; -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5); -webkit-border-radius: 2px; }
+    
+    ul.tunes li div.album div { display: block; opacity: .95; text-align: center; -webkit-transition: all .25s linear; clear: left; width: 120px;  }
+    ul.tunes li div.album div h5 { text-align: center; }
+    ul.tunes li div.album:hover div { opacity: 1; }
+    
+    ul.tunes li div.album span.vinyl { width: 116px; height: 116px; z-index: 1; display: block; -webkit-transition: all .25s linear;  position: absolute; top: 2px; left: 2px; margin-left: 16px; }
+    ul.tunes li div.album span.vinyl div {
+      position: absolute; 
+      top: 2px; 
+      left: 2px; 
+      display: block; 
+      z-index: 10; 
+      width: 112px; 
+      height: 112px; 
+      -webkit-border-radius: 59px; 
+      -moz-border-radius: 59px; 
+      -webkit-box-shadow: 0 0 6px rgba(0,0,0,.5); 
+      -webkit-transition: all .25s linear; 
+      overflow: hidden; 
+      border: solid 1px black; 
+      background:
+        -webkit-gradient(
+          linear, left top, left bottom, 
+          from(transparent),
+          color-stop(0.1, transparent),
+          color-stop(0.5, rgba(255,255,255,0.25)),
+          color-stop(0.9, transparent), 
+          to(transparent)),
+        -webkit-gradient(
+          radial, 56 56, 10, 56 56, 114, 
+          from(transparent),
+          color-stop(0.01, transparent),
+          color-stop(0.021, rgba(0,0,0,1)),
+          color-stop(0.09, rgba(0,0,0,1)),
+          color-stop(0.1, rgba(28,28,28,1)),
+          to(rgba(28,28,28,1)));
+      border-top: 1px solid rgba(255,255,255,.25);
+    }
+    ul.tunes li div.album:hover span.vinyl { -webkit-transform: translateX(60px); }
+    ul.tunes li div.album:hover span.vinyl div { -webkit-transform: rotate(120deg); border-top: 0; border-left: 1px solid rgba(255,255,255,.25); }
+   
+
+    ul.tunes li div.album ul.actions { display: block; position: absolute; width: 60px; -moz-border-radius: 3px; -webkit-border-radius: 3px;left: 65px; top: 0px; height: 114px; z-index: 20; -webkit-transition: all 0.25s linear; }
+    ul.tunes li div.album:hover ul.actions { -webkit-transform: translateX(60px); } 
+    
+    ul.tunes li div.album ul.actions li { display: block; position: absolute; height: 20px; width: 20px; left: 10px; top: 22px; background: -webkit-gradient(linear, left top, left bottom, from(black), to(#333)); -webkit-border-radius: 10px; -moz-border-radius: 10px; -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.15); }
+    ul.tunes li div.album ul.actions li:hover { background: -webkit-gradient(linear, left top, left bottom, from(#333), to(black)); }
+    ul.tunes li div.album ul.actions li.info { top: 48px; left: 19px; }
+    ul.tunes li div.album ul.actions li a { display: block; width: 20px; height: 20px; }
+    ul.tunes li div.album ul.actions li.play-pause a { background: url(imgs/play-button.png) no-repeat center center; }
+    ul.tunes li div.album ul.actions li.pause a { background: url(http://www.zurb.com/playground/playground/sliding-vinyl/info.png) no-repeat center center; }
+
+    ul.tunes li { text-shadow: 0 2px 3px rgba(0,0,0,.75); }
+    
+    ul.tunes h5 { padding-top: 8px; }
+    ul.tunes small {  opacity: .75; }
+
+span#dummy {
+  height: 1px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  line-height: 2px;
+}
+
+header h1, h2 {
+  padding: 5px;
+}
+
+label,input,button,select,textarea {
+    font-size: 14px;
+    font-weight: 100;
+}
+input[type="file"],input[type="image"],input[type="submit"],input[type="reset"],input[type="button"],input[type="radio"],input[type="checkbox"] {
+    width: auto;
+    -webkit-transition: 1s all ease-in-out;
+}
+
+
+textarea:focus,input[type="text"]:focus,input[type="password"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="time"]:focus,input[type="week"]:focus,input[type="number"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="color"]:focus,.uneditable-input:focus {
+    border-color: rgba(82,168,236,0.8);
+    outline: 0;
+}
+
+textarea,input[type="text"],input[type="password"],input[type="datetime"],input[type="datetime-local"],input[type="date"],input[type="month"],input[type="time"],input[type="week"],input[type="number"],input[type="email"],input[type="url"],input[type="search"],input[type="tel"],input[type="color"],.uneditable-input {
+    background-color: #ffffff;
+    -webkit-transition: border linear .2s, box-shadow linear .2s;
+    -moz-transition: border linear .2s, box-shadow linear .2s;
+    -o-transition: border linear .2s, box-shadow linear .2s;
+    transition: border linear .2s, box-shadow linear .2s;
+    -webkit-transition: border linear .2s, box-shadow linear .2s;
+    -moz-transition: border linear .2s, box-shadow linear .2s;
+    -o-transition: border linear .2s, box-shadow linear .2s;
+    transition: border linear .2s, box-shadow linear .2s;
+
+}
+
+textarea:focus,input[type="text"]:focus,input[type="password"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="time"]:focus,input[type="week"]:focus,input[type="number"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="color"]:focus,.uneditable-input:focus {
+    border-color: rgba(82,168,236,0.8);
+    outline: 0;
+}
+
