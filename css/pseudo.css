@@ -1,0 +1,83 @@
+/* Simple Reset */
+
+* {
+	padding: 0;
+	margin: 0;
+}
+/* Basic Menu Styles */
+
+#menu {
+	height: 110px; 
+	width: 350px;
+    overflow: hidden;
+    margin: 50px auto;
+    text-align: center;
+}
+
+#menu ul li {
+	text-align: center;
+	-webkit-filter: sepia(50%) brightness(-0.1) contrast(1);
+	list-style-type: none;
+
+}
+
+/* Menu Link Styles */
+#menu ul a {
+	display: block;
+	background: -webkit-linear-gradient(top, rgba(234,46,46,1) 0%,rgba(38,204,201,1) 50%,rgba(255,159,137,1) 100%);
+	color: #fff;
+
+	height: 100px; width: 330px;
+	-webkit-border-radius: 15px;
+	font: lighter 1.5em/100px "KL1MonoCase", Arial, Helvetica, Geneva, sans-serif;
+	text-decoration: none;
+	text-align: left;
+	padding-left: 10px;
+	-webkit-transition: margin .4s ease-in-out;
+	-moz-transition: margin .4s ease-in-out;
+	-o-transition: margin .4s ease-in-out;
+	-ms-transition: margin .4s ease-in-out;
+	transition: margin .4s ease-in-out;
+	box-shadow: 0px 2px 10px rgba(20,20,20,0.8);
+}
+
+
+/* Secondary Link Styles */
+#menu ul a:nth-of-type(even) {
+	background: #000;
+	color: white;
+}
+
+/* Hover Slide */
+#menu ul li:hover :first-child {
+	margin-top: -100px;
+
+}
+
+#menu ul li a:first-child {
+	border: 5px solid red;
+	width: 320px;
+}
+a.tri_buttons {
+	width: 30% !important;
+	display: inline-block;
+	position: relative;
+	text-align: 
+}
+
+a#green_button {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(36,183,44,1)), color-stop(50%,rgba(74,193,38,1)), color-stop(100%,rgba(181,249,102,1))) !important;
+}
+
+a#yellow_button {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(203,249,49,1)), color-stop(50%,rgba(198,242,87,1)), color-stop(100%,rgba(223,247,138,1))) !important;	position: relative;
+	top: -100px;
+	left: 33%;
+}
+
+a#red_button {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(232,46,49,1)), color-stop(50%,rgba(229,87,87,1)), color-stop(100%,rgba(226,129,129,1))) !important;
+	position: relative;
+	top: -200px;
+	left: 67%;
+}
