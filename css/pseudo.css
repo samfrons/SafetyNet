@@ -1,5 +1,30 @@
 /* Simple Reset */
 
+@font-face {
+	font-family: 'KL1MonoCase';
+	src: url(/fonts/KL1MonoCase.ttf);
+}
+
+@font-face {
+	font-family: 'Knewave';
+	src: url(/fonts/knewave-webfont.ttf);
+}
+
+@font-face {
+	font-family: 'Maven Pro Light';
+	src: url(/fonts/MavenProLight-300.otf);
+}
+
+@media only screen and (max-device-width: 480px) {
+ #menu ul li a:first-child {
+	border: 5px solid red;
+	width: 100%;
+	max-width: 300px !important;
+}
+
+}
+
+
 * {
 	padding: 0;
 	margin: 0;
@@ -8,15 +33,16 @@
 
 #menu {
 	height: 110px; 
-	width: 350px;
+	width: 100%;
     overflow: hidden;
     margin: 50px auto;
     text-align: center;
+    background-size: auto;
 }
 
 #menu ul li {
 	text-align: center;
-	-webkit-filter: sepia(50%) brightness(-0.1) contrast(1);
+
 	list-style-type: none;
 
 }
@@ -24,11 +50,10 @@
 /* Menu Link Styles */
 #menu ul a {
 	display: block;
-	background: -webkit-linear-gradient(top, rgba(234,46,46,1) 0%,rgba(38,204,201,1) 50%,rgba(255,159,137,1) 100%);
+	background-image: url(http://subtlepatterns.com/patterns/pool_table.png);
 	color: #fff;
-
-	height: 100px; width: 330px;
-	-webkit-border-radius: 15px;
+	background: rgba(25,0,0,0.4) ;
+	height: 100px; width: 350px;
 	font: lighter 1.5em/100px "KL1MonoCase", Arial, Helvetica, Geneva, sans-serif;
 	text-decoration: none;
 	text-align: left;
@@ -50,34 +75,201 @@
 
 /* Hover Slide */
 #menu ul li:hover :first-child {
-	margin-top: -100px;
+	margin-top: -110px;
+	background-position: -20px 0px;
 
 }
 
 #menu ul li a:first-child {
-	border: 5px solid red;
-	width: 320px;
+	border: 5px dotted rgba(220,20,10,0.1);
+	width: 100%;
+	max-width: 380px;
+	font-family: 'Knewave' !important;
+	font-size: 70px;
+	-webkit-animation-name: masked-animation;
+    -webkit-animation-duration: 20s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    text-shadow: 0px 2px 4px rgba(120,20,20,1);
+	background-image: url(http://modernsurvivalblog.com/wp-content/uploads/2011/05/safety-net.jpg) !important;
+}
+
+
+@-webkit-keyframes masked-animation {
+    from {
+        background-position: 0px 100px;
+    }
+
+    to {
+        background-position: 0px 400px;
+    }
+}
+
+
+#menu ul li a:first-child:after {
+	opacity: 0.5;
+	min-height: 100px;
+	width: 380px !important;
+	content: 'Help Me!';
+	position: absolute;
+	padding-left: 10px;
+	left: 5px;
+	background-color: black;
+	
 }
 a.tri_buttons {
 	width: 30% !important;
 	display: inline-block;
 	position: relative;
-	text-align: 
+	font-family: 'Knewave' !important;
+	background-image: url(http://subtlepatterns.com/patterns/green_dust_scratch.png) !important;
+	text-transform: uppercase;
+	text-align: center !important;
+	text-shadow: 0px 1px 2px rgba(20,30,20,0.7);
+	color: rgba(20,20,20,0.9) !important;
+	-webkit-box-shadow: inset 0px 0px 10px black !important;
 }
+      #pop-up { 
+        color: white;
+        background: black;
+        z-index: 100;
+        position: absolute;
+        height: 0px;
+        top: 20px;
+        left: 0%;
+        overflow: hidden;
+        width: 0px;
+        -webkit-box-shadow: 0px 0px 10px black;
+        padding: 10px;
+        font-family: 'Maven Pro Light';
+        opacity: 0;
+        z-index: 1000;
+            }
+
+       #pop-up h1 {
+       	max-width: 300px;
+       	 font-family: 'Maven Pro Light';
+
+       }
+
 
 a#green_button {
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(36,183,44,1)), color-stop(50%,rgba(74,193,38,1)), color-stop(100%,rgba(181,249,102,1))) !important;
+	
+}
+
+
+div#pop-up article {
+
+text-align: center;
+padding: 50px;
+}
+
+
+     article button {
+		height: 50px;
+		font-size: 14px;
+		-webkit-border-radius: 50px;
+		-moz-border-radius: 50px;
+		border-radius: 50px;
+		text-align: center;
+		width: 50px;
+		background-image: url(http://subtlepatterns.com/patterns/green_dust_scratch.png) ;
+		-webkit-box-shadow: 0px 0px 20px rgba(220, 255, 255, 0.5),
+							inset 0 0 10px rgba(0, 5, 55, 0.9);
+		border: 1px solid rgba(127, 255, 255, 0.25);
+		padding: 15px;
+		-webkit-transition: 1s all ease-in-out;
+		-moz-transition: 1s all ease-in-out;
+		-o-transition: 1s all ease-in-out;
+		transition: 1s all ease-in-out;
+		color: rgba(25, 25, 25, 0.75);
+		font-weight: bold;
+		cursor: pointer;
+		margin: 10px;
+
+     }
+
+article button:last-child {
+	-webkit-filter: hue-rotate(200deg);
 }
 
 a#yellow_button {
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(203,249,49,1)), color-stop(50%,rgba(198,242,87,1)), color-stop(100%,rgba(223,247,138,1))) !important;	position: relative;
+	background-image: url(http://subtlepatterns.com/patterns/green_dust_scratch.png) !important;
+	-webkit-filter: hue-rotate(270deg);
+	position: relative;
 	top: -100px;
-	left: 33%;
+	left: 33.5%;
 }
 
 a#red_button {
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(232,46,49,1)), color-stop(50%,rgba(229,87,87,1)), color-stop(100%,rgba(226,129,129,1))) !important;
+	-webkit-filter: hue-rotate(200deg);
 	position: relative;
 	top: -200px;
 	left: 67%;
+}
+#contactArray {
+	text-align: center;
+	color: white;
+}
+
+#contactArray select {
+	-webkit-border-radius: 0px !important;
+	border-radius: 0px !important;
+	width: 250px;
+	background: rgba(20,120,20,0.4);
+	margin: 5px;
+	font-family: 'Ranger';
+
+	background-image: url(http://subtlepatterns.com/patterns/green_dust_scratch.png) !important;
+}
+
+
+#contactArray #contactSelect1 {
+
+	-webkit-filter: hue-rotate(10deg);
+}
+
+#contactArray #contactSelect2 {
+
+	-webkit-filter: hue-rotate(20deg);
+}
+
+#contactArray #contactSelect3 {
+	
+	-webkit-filter: hue-rotate(30deg);
+}
+
+#contactArray #contactSelect4 {
+	background-color: rgba(100,140,100,0.9);
+	-webkit-filter: hue-rotate(40deg);
+}
+
+#contactArray #contactSelect5 {
+	background-color: rgba(100,110,100,0.9);
+	-webkit-filter: hue-rotate(50deg);
+}
+
+#contactArray select option {
+	background-color: red;
+	color: blue;
+
+}
+
+#enroll_button {
+  text-align: left;
+        z-index: 100;
+        font-size: 15px;
+        color: rgba(20,20,20,1);
+       -webkit-box-shadow: 0px 1px 5px black;
+        text-shadow: 0px 1px 4px rgba(130,20,20,0.9);
+        margin: 0 auto;
+        width: 230px;
+        position: relative;
+        top: 10px;
+}
+
+#enroll_button p {
+	max-width: 220px;
+	padding: 5px;
+	 background: rgba(250,250,250,0.4);
 }
